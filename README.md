@@ -1,10 +1,10 @@
 # Genie
 
-[![Latest Version](https://img.shields.io/github/release/esbenp/genie.svg?style=flat-square)](https://github.com/esbenp/genie/releases)
+[![Latest Version](https://img.shields.io/github/release/iphuongtt/genie.svg?style=flat-square)](https://github.com/iphuongtt/genie/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Build Status](https://img.shields.io/travis/esbenp/genie/master.svg?style=flat-square)](https://travis-ci.org/esbenp/genie)
-[![Coverage Status](https://img.shields.io/coveralls/esbenp/genie.svg?style=flat-square)](https://coveralls.io/github/esbenp/genie)
-[![Total Downloads](https://img.shields.io/packagist/dt/optimus/genie.svg?style=flat-square)](https://packagist.org/packages/optimus/genie)
+[![Build Status](https://img.shields.io/travis/iphuongtt/genie/master.svg?style=flat-square)](https://travis-ci.org/iphuongtt/genie)
+[![Coverage Status](https://img.shields.io/coveralls/iphuongtt/genie.svg?style=flat-square)](https://coveralls.io/github/esbenp/genie)
+[![Total Downloads](https://img.shields.io/packagist/dt/iphuongtt/genie.svg?style=flat-square)](https://packagist.org/packages/iphuongtt/genie)
 
 ## Introduction
 
@@ -20,13 +20,13 @@ Dedicated to the World's best (and only) Genie in a bottle. [Congrats on the fre
 For Laravel 5.4 and above
 
 ```bash
-composer require optimus/genie ~2.0
+composer require iphuongtt/genie ~2.0
 ```
 
 For Laravel 5.3 and below
 
 ```bash
-composer require optimus/genie ~1.0
+composer require iphuongtt/genie ~1.0
 ```
 
 ## Implementation
@@ -34,25 +34,26 @@ composer require optimus/genie ~1.0
 The examples will use a hypothetical Eloquent model named `User`.
 
 ```php
-<?php
 
-namespace App\Repositories;
-
-use App\Models\User;
-use Optimus\Genie\Repository;
-
-class UserRepository extends Repository
-{
-    protected function getModel()
-    {
-        return new User;
-    }
-}
+	<?php
+	
+	namespace App\Repositories;
+	
+	use App\Models\User;
+	use Iphuongtt\Genie\Repository;
+	
+	class UserRepository extends Repository
+	{
+	    protected function getModel()
+	    {
+	        return new User;
+	    }
+	}
 ```
 
 ## Options
 
-Genie is already integrated with [Optimus\Bruno](https://github.com/esbenp/bruno).
+Genie is already integrated with [Iphuongtt\Bruno](https://github.com/iphuongtt/bruno).
 See Bruno documentation for more information.
 The `$options` key given by all get-methods takes the following format:
 

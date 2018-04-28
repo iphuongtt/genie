@@ -1,11 +1,11 @@
 <?php
 
-namespace Optimus\Genie;
+namespace Iphuongtt\Genie;
 
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Optimus\Bruno\EloquentBuilderTrait;
+use Iphuongtt\Bruno\EloquentBuilderTrait;
 
 abstract class Repository
 {
@@ -79,7 +79,7 @@ abstract class Repository
 
         return $query->get();
     }
-    
+
     /**
      * Get latest resource
      * @param  array $options
@@ -199,7 +199,7 @@ abstract class Repository
     }
 
     /**
-     * Creates a new query builder with Optimus options set
+     * Creates a new query builder with Iphuongtt options set
      * @param  array $options
      * @return Builder
      */
