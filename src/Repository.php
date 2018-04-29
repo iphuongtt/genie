@@ -33,8 +33,12 @@ abstract class Repository
     public function get(array $options = [])
     {
         $query = $this->createBaseBuilder($options);
-
-        return $query->get();
+        $total_count = $query->getQuery()->getCountForPagination();
+        $data = $query->get();
+        return [
+            'total_count' => $total_count,
+            'data' => $data,
+        ];
     }
 
     /**
