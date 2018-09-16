@@ -79,6 +79,8 @@ abstract class Repository
     {
         $query = $this->createBaseBuilder($options);
 
+        $query->where($column, $value);
+
         $query->orderBy($this->getCreatedAtColumn(), 'DESC');
 
         return $query->get();
@@ -108,6 +110,8 @@ abstract class Repository
     public function getLatestWhere($column, $value, array $options = [])
     {
         $query = $this->createBaseBuilder($options);
+
+        $query->where($column, $value);
 
         $query->orderBy($this->getCreatedAtColumn(), 'DESC');
 
