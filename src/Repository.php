@@ -64,8 +64,12 @@ abstract class Repository
         $query = $this->createBaseBuilder($options);
 
         $query->orderBy($this->getCreatedAtColumn(), 'DESC');
-
-        return $query->get();
+        $total_count = $query->getQuery()->getCountForPagination();
+        $data = $query->get();
+        return [
+            'total_count' => $total_count,
+            'data' => $data,
+        ];
     }
 
     /**
@@ -83,7 +87,12 @@ abstract class Repository
 
         $query->orderBy($this->getCreatedAtColumn(), 'DESC');
 
-        return $query->get();
+        $total_count = $query->getQuery()->getCountForPagination();
+        $data = $query->get();
+        return [
+            'total_count' => $total_count,
+            'data' => $data,
+        ];
     }
 
     /**
@@ -131,7 +140,12 @@ abstract class Repository
 
         $query->where($column, $value);
 
-        return $query->get();
+        $total_count = $query->getQuery()->getCountForPagination();
+        $data = $query->get();
+        return [
+            'total_count' => $total_count,
+            'data' => $data,
+        ];
     }
 
     /**
@@ -147,7 +161,12 @@ abstract class Repository
 
         $query->where($clauses);
 
-        return $query->get();
+        $total_count = $query->getQuery()->getCountForPagination();
+        $data = $query->get();
+        return [
+            'total_count' => $total_count,
+            'data' => $data,
+        ];
     }
 
     /**
@@ -163,7 +182,12 @@ abstract class Repository
 
         $query->whereIn($column, $values);
 
-        return $query->get();
+        $total_count = $query->getQuery()->getCountForPagination();
+        $data = $query->get();
+        return [
+            'total_count' => $total_count,
+            'data' => $data,
+        ];
     }
 
     /**
